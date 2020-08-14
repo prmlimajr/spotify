@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import Player from './components/Player';
+import Header from './components/Header';
+import ErrorBox from './components/ErrorBox';
+import 'rc-slider/assets/index.css';
+import Routes from './routes';
+import './config/reactotron';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <BrowserRouter>
+          <div className='wrapper'>
+            <div className='main-menu'>
+              <div className='side'>
+                <Sidebar />
+              </div>
+              <div className='content'>
+                <ErrorBox />
+                <Header />
+                <Routes />
+              </div>
+            </div>
+
+            <Player />
+          </div>
+        </BrowserRouter>
+      </Provider>
+    );
+  }
 }
-
-export default App;

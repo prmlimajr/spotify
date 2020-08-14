@@ -1,0 +1,80 @@
+.player {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #282828;
+  padding: 12px;
+}
+
+.current {
+  width: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.current img {
+  width: 58px;
+  height: 58px;
+}
+
+.current div {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.current div span {
+  font-size: 13px;
+  color: #fff;
+}
+
+.current div small {
+  font-size: 11px;
+  color: #b3b3b3;
+  margin-top: 5px;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.volume img {
+  margin-right: 5px;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.controls button {
+  background: transparent;
+  border: 0;
+  margin: 0 15px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.time span {
+  font-size: 11px;
+  color: #b3b3b3;
+}
+
+.progress-slider {
+  width: 500px;
+  margin: 0 15px;
+}
